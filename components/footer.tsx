@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/services-data";
 import { siteConfig } from "@/lib/site-config";
@@ -20,8 +21,14 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="text-2xl font-bold tracking-tight">
-              DIN
+            <Link href="/" className="inline-block">
+              <Image
+                src="/DIN_Black_White.jpeg"
+                alt="DIN"
+                width={100}
+                height={40}
+                className="h-10 w-auto invert"
+              />
             </Link>
             <p className="mt-4 text-sm text-background/70 max-w-xs">
               Integrated business and financial consulting for companies across
@@ -29,8 +36,9 @@ export function Footer() {
             </p>
             <div className="mt-6 space-y-2 text-sm text-background/70">
               <p>{siteConfig.emails.general}</p>
-              <p>Luxembourg (Europe)</p>
+              <p>London, United Kingdom</p>
               <p>Sheridan, Wyoming (USA)</p>
+              <p>Luxembourg (Europe)</p>
             </div>
           </div>
 

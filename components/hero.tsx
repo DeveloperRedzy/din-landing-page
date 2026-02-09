@@ -11,7 +11,7 @@ export function Hero() {
         <div className='mx-auto max-w-3xl text-center'>
           <div className='inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm font-medium text-foreground mb-6'>
             <span className='h-2 w-2 rounded-full bg-accent' />
-            Luxembourg &middot; USA &middot; Global
+            UK &middot; USA &middot; Luxembourg
           </div>
 
           <h1 className='text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance'>

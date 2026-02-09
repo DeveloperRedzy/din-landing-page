@@ -101,8 +101,8 @@ export function WhyDin() {
                       International Presence
                     </span>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Offices in Luxembourg and Wyoming, supporting clients
-                      across multiple time zones.
+                      Offices in London, Wyoming, and Luxembourg, supporting
+                      clients across multiple time zones.
                     </p>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export function WhyDin() {
                       Multi-Jurisdiction Expertise
                     </span>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Experience with US GAAP, IFRS, and Luxembourg GAAP.
+                      Experience with US GAAP, IFRS, UK standards, and Luxembourg GAAP.
                     </p>
                   </div>
                 </div>

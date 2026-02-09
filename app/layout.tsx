@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | DIN, LLC",
   },
   description:
-    "Expert bookkeeping, financial consulting, marketing strategy, fintech consulting, IT solutions, and engineering services. Offices in Luxembourg and Wyoming.",
+    "Expert bookkeeping, financial consulting, marketing strategy, fintech consulting, IT solutions, and engineering services. Offices in London, Wyoming, and Luxembourg.",
   icons: {
     icon: [
       {

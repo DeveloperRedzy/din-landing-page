@@ -10,14 +10,13 @@ import {
   Award,
   Users,
   MessageSquare,
-  Globe,
   MapPin,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about DIN, LLC — our mission, values, and team across Luxembourg and Wyoming. Integrated consulting for businesses worldwide.',
+    'Learn about DIN, LLC — our mission, values, and team across London, Wyoming, and Luxembourg. Integrated consulting for businesses worldwide.',
 };
 
 const pillars = [
@@ -192,11 +191,11 @@ export default function AboutPage() {
                   <MapPin className='h-5 w-5' />
                 </div>
                 <h3 className='font-semibold text-foreground'>
-                  Luxembourg Office
+                  London Office
                 </h3>
                 <p className='mt-2 text-sm text-muted-foreground'>
-                  Our European headquarters, supporting clients across the EU
-                  and beyond.
+                  Our UK headquarters, supporting clients across the United
+                  Kingdom and beyond.
                 </p>
               </div>
               <div className='rounded-xl border border-border bg-card p-6'>
@@ -213,13 +212,14 @@ export default function AboutPage() {
               </div>
               <div className='sm:col-span-2 rounded-xl border border-border bg-card p-6'>
                 <div className='flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent mb-4'>
-                  <Globe className='h-5 w-5' />
+                  <MapPin className='h-5 w-5' />
                 </div>
-                <h3 className='font-semibold text-foreground'>Global Reach</h3>
+                <h3 className='font-semibold text-foreground'>
+                  Luxembourg Office
+                </h3>
                 <p className='mt-2 text-sm text-muted-foreground'>
-                  Our team operates across Europe and the United States,
-                  allowing us to support clients across multiple time zones and
-                  jurisdictions.
+                  Our European office, supporting clients across the EU and
+                  continental Europe.
                 </p>
               </div>
             </div>

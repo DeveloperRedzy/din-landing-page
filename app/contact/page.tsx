@@ -7,7 +7,7 @@ import { MapPin, Clock, Mail } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with DIN, LLC. Offices in Luxembourg and Wyoming, supporting clients across the U.S., Europe, and global markets.',
+    'Get in touch with DIN, LLC. Offices in London, Wyoming, and Luxembourg, supporting clients across the UK, U.S., and Europe.',
 };
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
       <PageHero
         label='Contact Us'
         title="Let's talk about your goals"
-        description='We operate internationally, with a presence in Luxembourg (Europe) and Wyoming (USA), supporting clients across the U.S., Europe, and global markets.'
+        description='We operate internationally, with offices in London, Wyoming, and Luxembourg, supporting clients across the UK, U.S., and Europe.'
         breadcrumbs={[{ label: 'Contact', href: '/contact' }]}
       />
 
@@ -41,6 +41,68 @@ export default function ContactPage() {
                       {siteConfig.emails.general}
                     </a>
                   </span>
+                </div>
+              </div>
+
+              {/* UK Office */}
+              <div className='rounded-xl border border-border bg-card p-6'>
+                <div className='flex items-center gap-2 mb-4'>
+                  <MapPin className='h-5 w-5 text-accent' />
+                  <h3 className='font-semibold text-foreground'>
+                    {siteConfig.offices.uk.name}
+                  </h3>
+                </div>
+                <div className='space-y-3 text-sm text-muted-foreground'>
+                  <p>{siteConfig.offices.uk.location}</p>
+                  <div className='flex items-start gap-3'>
+                    <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
+                    <div>
+                      <p className='font-medium text-foreground'>
+                        Office Hours ({siteConfig.offices.uk.timezone})
+                      </p>
+                      <p>{siteConfig.offices.uk.hours}</p>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3'>
+                    <Mail className='h-4 w-4 shrink-0 text-muted-foreground' />
+                    <a
+                      href={`mailto:${siteConfig.offices.uk.email}`}
+                      className='hover:text-foreground transition-colors'
+                    >
+                      {siteConfig.offices.uk.email}
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* USA Office */}
+              <div className='rounded-xl border border-border bg-card p-6'>
+                <div className='flex items-center gap-2 mb-4'>
+                  <MapPin className='h-5 w-5 text-accent' />
+                  <h3 className='font-semibold text-foreground'>
+                    {siteConfig.offices.usa.name}
+                  </h3>
+                </div>
+                <div className='space-y-3 text-sm text-muted-foreground'>
+                  <p>{siteConfig.offices.usa.location}</p>
+                  <div className='flex items-start gap-3'>
+                    <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
+                    <div>
+                      <p className='font-medium text-foreground'>
+                        Office Hours ({siteConfig.offices.usa.timezone})
+                      </p>
+                      <p>{siteConfig.offices.usa.hours}</p>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3'>
+                    <Mail className='h-4 w-4 shrink-0 text-muted-foreground' />
+                    <a
+                      href={`mailto:${siteConfig.offices.usa.email}`}
+                      className='hover:text-foreground transition-colors'
+                    >
+                      {siteConfig.offices.usa.email}
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -74,42 +136,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Wyoming Office */}
-              <div className='rounded-xl border border-border bg-card p-6'>
-                <div className='flex items-center gap-2 mb-4'>
-                  <MapPin className='h-5 w-5 text-accent' />
-                  <h3 className='font-semibold text-foreground'>
-                    {siteConfig.offices.wyoming.name}
-                  </h3>
-                </div>
-                <div className='space-y-3 text-sm text-muted-foreground'>
-                  <p>{siteConfig.offices.wyoming.location}</p>
-                  <div className='flex items-start gap-3'>
-                    <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
-                    <div>
-                      <p className='font-medium text-foreground'>
-                        Office Hours ({siteConfig.offices.wyoming.timezone})
-                      </p>
-                      <p>{siteConfig.offices.wyoming.hours}</p>
-                    </div>
-                  </div>
-                  <div className='flex items-center gap-3'>
-                    <Mail className='h-4 w-4 shrink-0 text-muted-foreground' />
-                    <a
-                      href={`mailto:${siteConfig.offices.wyoming.email}`}
-                      className='hover:text-foreground transition-colors'
-                    >
-                      {siteConfig.offices.wyoming.email}
-                    </a>
-                  </div>
-                </div>
-              </div>
-
               <p className='text-sm text-muted-foreground'>
-                Our team operates across Europe and the United States, allowing
-                us to support clients across multiple time zones. Outside of
-                standard hours, messages can be submitted at any time and will
-                be addressed on the next business day.
+                Our team operates across the UK, the United States, and Europe,
+                allowing us to support clients across multiple time zones.
+                Outside of standard hours, messages can be submitted at any time
+                and will be addressed on the next business day.
               </p>
             </div>
 
