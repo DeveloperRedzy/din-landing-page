@@ -8,15 +8,21 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { services } from "@/lib/services-data";
 
+const aboutSubLinks = [
+  { label: "About DIN", href: "/about" },
+  { label: "Purpose & Values", href: "/about/purpose-and-values" },
+];
+
 const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services", hasDropdown: true },
+  { label: "About", href: "/about", dropdown: "about" as const },
+  { label: "Services", href: "/services", dropdown: "services" as const },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   const isActive = (href: string) => {
@@ -39,12 +45,12 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) =>
-              link.hasDropdown ? (
+              link.dropdown ? (
                 <div
                   key={link.href}
                   className="relative"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  onMouseEnter={() => setOpenDropdown(link.dropdown)}
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <Link
                     href={link.href}
@@ -59,39 +65,57 @@ export function Header() {
                     <ChevronDown
                       className={cn(
                         "h-3.5 w-3.5 transition-transform",
-                        servicesOpen && "rotate-180"
+                        openDropdown === link.dropdown && "rotate-180"
                       )}
                     />
                   </Link>
 
-                  {/* Dropdown */}
-                  {servicesOpen && (
+                  {/* About Dropdown */}
+                  {link.dropdown === "about" && openDropdown === "about" && (
                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
-                      <div className="w-72 rounded-xl border border-border bg-background p-2 shadow-lg">
-                        {services.map((service) => {
-                          const Icon = service.icon;
-                          return (
-                            <Link
-                              key={service.slug}
-                              href={`/services/${service.slug}`}
-                              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
-                            >
-                              <Icon className="h-4 w-4 shrink-0" />
-                              {service.title}
-                            </Link>
-                          );
-                        })}
-                        <div className="mt-1 border-t border-border pt-1">
+                      <div className="w-56 rounded-xl border border-border bg-background p-2 shadow-lg">
+                        {aboutSubLinks.map((sub) => (
                           <Link
-                            href="/services"
-                            className="flex items-center rounded-lg px-3 py-2.5 text-sm font-medium text-accent hover:bg-secondary transition-colors"
+                            key={sub.href}
+                            href={sub.href}
+                            className="flex items-center rounded-lg px-3 py-2.5 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
                           >
-                            View all services
+                            {sub.label}
                           </Link>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   )}
+
+                  {/* Services Dropdown */}
+                  {link.dropdown === "services" &&
+                    openDropdown === "services" && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+                        <div className="w-72 rounded-xl border border-border bg-background p-2 shadow-lg">
+                          {services.map((service) => {
+                            const Icon = service.icon;
+                            return (
+                              <Link
+                                key={service.slug}
+                                href={`/services/${service.slug}`}
+                                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+                              >
+                                <Icon className="h-4 w-4 shrink-0" />
+                                {service.title}
+                              </Link>
+                            );
+                          })}
+                          <div className="mt-1 border-t border-border pt-1">
+                            <Link
+                              href="/services"
+                              className="flex items-center rounded-lg px-3 py-2.5 text-sm font-medium text-accent hover:bg-secondary transition-colors"
+                            >
+                              View all services
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                 </div>
               ) : (
                 <Link
@@ -154,7 +178,21 @@ export function Header() {
                 >
                   {link.label}
                 </Link>
-                {link.hasDropdown && (
+                {link.dropdown === "about" && (
+                  <div className="ml-4 mt-1 space-y-1">
+                    {aboutSubLinks.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                {link.dropdown === "services" && (
                   <div className="ml-4 mt-1 space-y-1">
                     {services.map((service) => (
                       <Link
