@@ -38,7 +38,7 @@ export function Header() {
           {/* Logo */}
           <Link href='/' className='shrink-0'>
             <Image
-              src='/DIN_Black_White.jpeg'
+              src='/DIN_White_Black.jpeg'
               alt='DIN'
               width={80}
               height={32}
