@@ -124,7 +124,7 @@ export default function AboutPage() {
           <SectionHeading
             label='Mission & Values'
             title='What we believe in'
-            description='Our mission is to deliver integrated, practical solutions that empower businesses to thrive \u2014 whether you\u2019re an early-stage startup or a mature company.'
+            description="Our mission is to deliver integrated, practical solutions that empower businesses to thrive whether you're an early-stage startup or a mature company."
           />
 
           <div className='mt-12 grid gap-8 sm:grid-cols-2'>
@@ -190,9 +190,7 @@ export default function AboutPage() {
                 <div className='flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent mb-4'>
                   <MapPin className='h-5 w-5' />
                 </div>
-                <h3 className='font-semibold text-foreground'>
-                  London Office
-                </h3>
+                <h3 className='font-semibold text-foreground'>London Office</h3>
                 <p className='mt-2 text-sm text-muted-foreground'>
                   Our UK headquarters, supporting clients across the United
                   Kingdom and beyond.

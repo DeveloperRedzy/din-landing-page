@@ -15,15 +15,15 @@ export function Hero() {
           </div>
 
           <h1 className='text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance'>
-            Empowering your business with{' '}
-            <span className='text-accent'>tailored insights</span>
+            Precision. <span className='text-accent'>Results.</span>
           </h1>
 
           <p className='mt-6 text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto text-pretty'>
-            DIN, LLC provides integrated financial consulting, technology
-            solutions, and marketing strategy for entrepreneurs and companies
-            around the globe. We deliver the clarity, tools, and guidance you
-            need to make informed decisions and reach your goals.
+            At DIN, we are not defined by services — we are defined by outcomes.
+            With experience supporting over 200 satisfied clients across the
+            United States, Europe, and international markets, we have built our
+            reputation on measurable performance, disciplined execution, and
+            long-term partnerships.
           </p>
 
           <div className='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4'>
@@ -61,7 +61,7 @@ export function Hero() {
                   clipRule='evenodd'
                 />
               </svg>
-              <span>Multidisciplinary Team</span>
+              <span>200+ Satisfied Clients</span>
             </div>
             <div className='flex items-center gap-2'>
               <svg

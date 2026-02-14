@@ -53,7 +53,13 @@ export default function ContactPage() {
                   </h3>
                 </div>
                 <div className='space-y-3 text-sm text-muted-foreground'>
-                  <p>{siteConfig.offices.uk.location}</p>
+                  <address className='not-italic leading-relaxed'>
+                    {siteConfig.offices.uk.address.map((line) => (
+                      <span key={line} className='block'>
+                        {line}
+                      </span>
+                    ))}
+                  </address>
                   <div className='flex items-start gap-3'>
                     <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
                     <div>
@@ -84,7 +90,13 @@ export default function ContactPage() {
                   </h3>
                 </div>
                 <div className='space-y-3 text-sm text-muted-foreground'>
-                  <p>{siteConfig.offices.usa.location}</p>
+                  <address className='not-italic leading-relaxed'>
+                    {siteConfig.offices.usa.address.map((line) => (
+                      <span key={line} className='block'>
+                        {line}
+                      </span>
+                    ))}
+                  </address>
                   <div className='flex items-start gap-3'>
                     <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
                     <div>
@@ -115,6 +127,13 @@ export default function ContactPage() {
                   </h3>
                 </div>
                 <div className='space-y-3 text-sm text-muted-foreground'>
+                  <address className='not-italic leading-relaxed'>
+                    {siteConfig.offices.luxembourg.address.map((line) => (
+                      <span key={line} className='block'>
+                        {line}
+                      </span>
+                    ))}
+                  </address>
                   <div className='flex items-start gap-3'>
                     <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
                     <div>
