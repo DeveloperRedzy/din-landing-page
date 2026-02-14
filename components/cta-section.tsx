@@ -40,10 +40,12 @@ export function CTASection({
                 size='lg'
                 className='border-background/20 text-background hover:bg-background/10 bg-transparent w-full sm:w-auto'
               >
-                <Link href='mailto:info@din.lu'>Email Us</Link>
+                <Link href='mailto:info@dinsolution.com'>Email Us</Link>
               </Button>
             </div>
-            <p className='mt-6 text-sm text-background/50'>info@din.lu</p>
+            <p className='mt-6 text-sm text-background/50'>
+              info@dinsolution.com
+            </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: 'DIN',
   shortName: 'DIN',
+  url: 'https://www.dinsolution.com',
   tagline: 'Empowering your business with tailored insights and technology',
   description:
     'Expert bookkeeping, financial consulting, marketing strategy, fintech consulting, IT solutions, and engineering services. Offices in London, Wyoming, and Luxembourg.',
@@ -51,6 +52,8 @@ export const siteConfig = {
   },
   social: {
     linkedin: '#',
+    instagram:
+      'https://www.instagram.com/din.group?igsh=MWR6bGF0b3NqdW1vZA%3D%3D&utm_source=qr',
     twitter: '#',
   },
 } as const;

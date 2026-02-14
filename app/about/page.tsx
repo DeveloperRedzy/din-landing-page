@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about DIN, LLC — our mission, values, and team across London, Wyoming, and Luxembourg. Integrated consulting for businesses worldwide.',
+    'Learn about DIN — our mission, values, and team across London, Wyoming, and Luxembourg. Integrated consulting for businesses worldwide.',
 };
 
 const pillars = [
@@ -81,7 +81,7 @@ export default function AboutPage() {
       <PageHero
         label='About Us'
         title='Empowering your business with tailored insights and technology'
-        description='At DIN, LLC, we exist to make your business stronger. Our team of finance, technology, and marketing professionals works with entrepreneurs and companies around the globe to provide the clarity, tools, and guidance you need to make informed decisions and reach your goals.'
+        description='At DIN, we exist to make your business stronger. Our team of finance, technology, and marketing professionals works with entrepreneurs and companies around the globe to provide the clarity, tools, and guidance you need to make informed decisions and reach your goals.'
         breadcrumbs={[{ label: 'About', href: '/about' }]}
       />
 

@@ -7,7 +7,7 @@ import { MapPin, Clock, Mail } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with DIN, LLC. Offices in London, Wyoming, and Luxembourg, supporting clients across the UK, U.S., and Europe.',
+    'Get in touch with DIN. Offices in London, Wyoming, and Luxembourg, supporting clients across the UK, U.S., and Europe.',
 };
 
 export default function ContactPage() {
