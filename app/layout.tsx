@@ -30,11 +30,20 @@ export const metadata: Metadata = {
     title: 'DIN | FinTech Solutions',
     description,
     url: 'https://www.dinsolution.com',
+    images: [
+      {
+        url: '/DIN_Black_White.jpeg',
+        width: 1536,
+        height: 1024,
+        alt: 'DIN - Business & Financial Consulting',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'DIN | FinTech Solutions',
     description,
+    images: ['/DIN_Black_White.jpeg'],
   },
   icons: {
     icon: '/favicon-32x32.png',

@@ -34,7 +34,7 @@ export function WhyDin() {
               A partner who understands your unique challenges
             </h2>
             <p className="mt-4 text-muted-foreground text-lg text-pretty">
-              At DIN, LLC, we exist to make your business stronger. Our team of
+              At DIN, we exist to make your business stronger. Our team of
               finance, technology, and marketing professionals works with
               entrepreneurs and companies around the globe to provide the
               clarity, tools, and guidance you need.
