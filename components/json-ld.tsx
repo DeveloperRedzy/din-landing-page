@@ -12,15 +12,15 @@ function OrganizationSchema() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        email: siteConfig.emails.uk,
-        contactType: 'customer service',
-        areaServed: 'GB',
-      },
-      {
-        '@type': 'ContactPoint',
         email: siteConfig.emails.usa,
         contactType: 'customer service',
         areaServed: 'US',
+      },
+      {
+        '@type': 'ContactPoint',
+        email: siteConfig.emails.uk,
+        contactType: 'customer service',
+        areaServed: 'GB',
       },
       {
         '@type': 'ContactPoint',
@@ -32,18 +32,18 @@ function OrganizationSchema() {
     address: [
       {
         '@type': 'PostalAddress',
-        streetAddress: '71-75 Shelton Street, Covent Garden',
-        addressLocality: 'London',
-        postalCode: 'WC2H 9JQ',
-        addressCountry: 'GB',
-      },
-      {
-        '@type': 'PostalAddress',
         streetAddress: '30 N Gould St Ste N',
         addressLocality: 'Sheridan',
         addressRegion: 'WY',
         postalCode: '82801',
         addressCountry: 'US',
+      },
+      {
+        '@type': 'PostalAddress',
+        streetAddress: '71-75 Shelton Street, Covent Garden',
+        addressLocality: 'London',
+        postalCode: 'WC2H 9JQ',
+        addressCountry: 'GB',
       },
       {
         '@type': 'PostalAddress',

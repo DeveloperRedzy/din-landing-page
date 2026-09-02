@@ -36,8 +36,8 @@ export function Footer() {
             </p>
             <div className='mt-6 space-y-2 text-sm text-background/70'>
               <p>{siteConfig.emails.general}</p>
-              <p>London, United Kingdom</p>
               <p>Sheridan, Wyoming (USA)</p>
+              <p>London, United Kingdom</p>
               <p>Luxembourg (Europe)</p>
             </div>
           </div>

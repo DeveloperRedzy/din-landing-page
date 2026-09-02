@@ -23,6 +23,29 @@ export const metadata: Metadata = {
 
 const positions = [
   {
+    title: 'Bookkeeper (US-Based, Remote)',
+    location: 'Remote — United States',
+    type: 'Remote',
+    experience: 'Minimum 2 years experience required',
+    overview:
+      'We are looking for an experienced Bookkeeper with strong knowledge of US GAAP and U.S. bookkeeping procedures. The successful candidate will support client accounting operations and ensure accurate financial records.',
+    responsibilities: [
+      'Daily transaction booking and reconciliations',
+      'Preparation of financial summaries and reports',
+      'Ensuring compliance with US GAAP standards',
+      'Maintaining organised and audit-ready documentation',
+      'Supporting financial performance analysis',
+    ],
+    requirements: [
+      'Minimum 2 years of bookkeeping experience',
+      'Knowledge of US GAAP',
+      'Experience with QuickBooks, Xero, or similar accounting software',
+      'Strong attention to detail and analytical skills',
+      'Professional communication skills',
+    ],
+    note: 'We are looking for professionals who understand both technical accuracy and business impact.',
+  },
+  {
     title: 'Sales Officer',
     location: 'London, United Kingdom',
     type: 'On-Site / Hybrid',
@@ -44,29 +67,6 @@ const positions = [
       'Fluency in English',
     ],
     note: 'We value individuals who are proactive, disciplined, and relationship-driven.',
-  },
-  {
-    title: 'Accountant',
-    location: 'Luxembourg',
-    type: 'On-Site / Hybrid',
-    experience: 'Minimum 2 years experience required',
-    overview:
-      'We are looking for a detail-oriented Accountant with strong knowledge of international and Luxembourg accounting standards. This role involves managing financial reporting, ensuring compliance, and supporting internal and client accounting operations.',
-    responsibilities: [
-      'Prepare and review financial statements',
-      'Ensure compliance with IFRS and LUX GAAP',
-      'Support reporting under multi-jurisdictional standards',
-      'Perform reconciliations and financial analysis',
-      'Assist with audit preparation and documentation',
-    ],
-    requirements: [
-      'Minimum 2 years of accounting experience',
-      'Strong knowledge of IFRS and LUX-GAAP',
-      'Experience with accounting software such as SAP, QuickBooks, Xero',
-      'Strong analytical skills and attention to detail',
-      'Fluency in English (additional languages are an advantage)',
-    ],
-    note: 'We are seeking professionals who combine technical expertise with commercial awareness.',
   },
   {
     title: 'Bookkeeper (UK-Based, Remote)',
@@ -92,27 +92,27 @@ const positions = [
     note: 'We value reliability, precision, and proactive communication.',
   },
   {
-    title: 'Bookkeeper (US-Based, Remote)',
-    location: 'Remote — United States',
-    type: 'Remote',
+    title: 'Accountant',
+    location: 'Luxembourg',
+    type: 'On-Site / Hybrid',
     experience: 'Minimum 2 years experience required',
     overview:
-      'We are looking for an experienced Bookkeeper with strong knowledge of US GAAP and U.S. bookkeeping procedures. The successful candidate will support client accounting operations and ensure accurate financial records.',
+      'We are looking for a detail-oriented Accountant with strong knowledge of international and Luxembourg accounting standards. This role involves managing financial reporting, ensuring compliance, and supporting internal and client accounting operations.',
     responsibilities: [
-      'Daily transaction booking and reconciliations',
-      'Preparation of financial summaries and reports',
-      'Ensuring compliance with US GAAP standards',
-      'Maintaining organised and audit-ready documentation',
-      'Supporting financial performance analysis',
+      'Prepare and review financial statements',
+      'Ensure compliance with IFRS and LUX GAAP',
+      'Support reporting under multi-jurisdictional standards',
+      'Perform reconciliations and financial analysis',
+      'Assist with audit preparation and documentation',
     ],
     requirements: [
-      'Minimum 2 years of bookkeeping experience',
-      'Knowledge of US GAAP',
-      'Experience with QuickBooks, Xero, or similar accounting software',
-      'Strong attention to detail and analytical skills',
-      'Professional communication skills',
+      'Minimum 2 years of accounting experience',
+      'Strong knowledge of IFRS and LUX-GAAP',
+      'Experience with accounting software such as SAP, QuickBooks, Xero',
+      'Strong analytical skills and attention to detail',
+      'Fluency in English (additional languages are an advantage)',
     ],
-    note: 'We are looking for professionals who understand both technical accuracy and business impact.',
+    note: 'We are seeking professionals who combine technical expertise with commercial awareness.',
   },
   {
     title: 'IT Junior (Remote)',
@@ -143,7 +143,7 @@ const benefits = [
   {
     icon: Globe,
     title: 'International Exposure',
-    description: 'Work across EU and U.S. markets',
+    description: 'Work across U.S., UK, and EU markets',
   },
   {
     icon: TrendingUp,

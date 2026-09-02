@@ -7,7 +7,7 @@ import { MapPin, Clock, Mail } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with DIN. Offices in London, Wyoming, and Luxembourg, supporting clients across the UK, U.S., and Europe.',
+    'Get in touch with DIN. Offices in Wyoming (USA), London, and Luxembourg, supporting clients across the U.S., UK, and Europe.',
 };
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
       <PageHero
         label='Contact Us'
         title="Let's talk about your goals"
-        description='We operate internationally, with offices in London, Wyoming, and Luxembourg, supporting clients across the UK, U.S., and Europe.'
+        description='We operate internationally, with offices in Wyoming (USA), London, and Luxembourg, supporting clients across the U.S., UK, and Europe.'
         breadcrumbs={[{ label: 'Contact', href: '/contact' }]}
       />
 
@@ -44,119 +44,49 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* UK Office */}
-              <div className='rounded-xl border border-border bg-card p-6'>
-                <div className='flex items-center gap-2 mb-4'>
-                  <MapPin className='h-5 w-5 text-accent' />
-                  <h3 className='font-semibold text-foreground'>
-                    {siteConfig.offices.uk.name}
-                  </h3>
-                </div>
-                <div className='space-y-3 text-sm text-muted-foreground'>
-                  <address className='not-italic leading-relaxed'>
-                    {siteConfig.offices.uk.address.map((line) => (
-                      <span key={line} className='block'>
-                        {line}
-                      </span>
-                    ))}
-                  </address>
-                  <div className='flex items-start gap-3'>
-                    <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
-                    <div>
-                      <p className='font-medium text-foreground'>
-                        Office Hours ({siteConfig.offices.uk.timezone})
-                      </p>
-                      <p>{siteConfig.offices.uk.hours}</p>
+              {Object.entries(siteConfig.offices).map(([key, office]) => (
+                <div
+                  key={key}
+                  className='rounded-xl border border-border bg-card p-6'
+                >
+                  <div className='flex items-center gap-2 mb-4'>
+                    <MapPin className='h-5 w-5 text-accent' />
+                    <h3 className='font-semibold text-foreground'>
+                      {office.name}
+                    </h3>
+                  </div>
+                  <div className='space-y-3 text-sm text-muted-foreground'>
+                    <address className='not-italic leading-relaxed'>
+                      {office.address.map((line) => (
+                        <span key={line} className='block'>
+                          {line}
+                        </span>
+                      ))}
+                    </address>
+                    <div className='flex items-start gap-3'>
+                      <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
+                      <div>
+                        <p className='font-medium text-foreground'>
+                          Office Hours ({office.timezone})
+                        </p>
+                        <p>{office.hours}</p>
+                      </div>
+                    </div>
+                    <div className='flex items-center gap-3'>
+                      <Mail className='h-4 w-4 shrink-0 text-muted-foreground' />
+                      <a
+                        href={`mailto:${office.email}`}
+                        className='hover:text-foreground transition-colors'
+                      >
+                        {office.email}
+                      </a>
                     </div>
                   </div>
-                  <div className='flex items-center gap-3'>
-                    <Mail className='h-4 w-4 shrink-0 text-muted-foreground' />
-                    <a
-                      href={`mailto:${siteConfig.offices.uk.email}`}
-                      className='hover:text-foreground transition-colors'
-                    >
-                      {siteConfig.offices.uk.email}
-                    </a>
-                  </div>
                 </div>
-              </div>
-
-              {/* USA Office */}
-              <div className='rounded-xl border border-border bg-card p-6'>
-                <div className='flex items-center gap-2 mb-4'>
-                  <MapPin className='h-5 w-5 text-accent' />
-                  <h3 className='font-semibold text-foreground'>
-                    {siteConfig.offices.usa.name}
-                  </h3>
-                </div>
-                <div className='space-y-3 text-sm text-muted-foreground'>
-                  <address className='not-italic leading-relaxed'>
-                    {siteConfig.offices.usa.address.map((line) => (
-                      <span key={line} className='block'>
-                        {line}
-                      </span>
-                    ))}
-                  </address>
-                  <div className='flex items-start gap-3'>
-                    <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
-                    <div>
-                      <p className='font-medium text-foreground'>
-                        Office Hours ({siteConfig.offices.usa.timezone})
-                      </p>
-                      <p>{siteConfig.offices.usa.hours}</p>
-                    </div>
-                  </div>
-                  <div className='flex items-center gap-3'>
-                    <Mail className='h-4 w-4 shrink-0 text-muted-foreground' />
-                    <a
-                      href={`mailto:${siteConfig.offices.usa.email}`}
-                      className='hover:text-foreground transition-colors'
-                    >
-                      {siteConfig.offices.usa.email}
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Luxembourg Office */}
-              <div className='rounded-xl border border-border bg-card p-6'>
-                <div className='flex items-center gap-2 mb-4'>
-                  <MapPin className='h-5 w-5 text-accent' />
-                  <h3 className='font-semibold text-foreground'>
-                    {siteConfig.offices.luxembourg.name}
-                  </h3>
-                </div>
-                <div className='space-y-3 text-sm text-muted-foreground'>
-                  <address className='not-italic leading-relaxed'>
-                    {siteConfig.offices.luxembourg.address.map((line) => (
-                      <span key={line} className='block'>
-                        {line}
-                      </span>
-                    ))}
-                  </address>
-                  <div className='flex items-start gap-3'>
-                    <Clock className='h-4 w-4 mt-0.5 shrink-0 text-muted-foreground' />
-                    <div>
-                      <p className='font-medium text-foreground'>
-                        Office Hours ({siteConfig.offices.luxembourg.timezone})
-                      </p>
-                      <p>{siteConfig.offices.luxembourg.hours}</p>
-                    </div>
-                  </div>
-                  <div className='flex items-center gap-3'>
-                    <Mail className='h-4 w-4 shrink-0 text-muted-foreground' />
-                    <a
-                      href={`mailto:${siteConfig.offices.luxembourg.email}`}
-                      className='hover:text-foreground transition-colors'
-                    >
-                      {siteConfig.offices.luxembourg.email}
-                    </a>
-                  </div>
-                </div>
-              </div>
+              ))}
 
               <p className='text-sm text-muted-foreground'>
-                Our team operates across the UK, the United States, and Europe,
+                Our team operates across the United States, the UK, and Europe,
                 allowing us to support clients across multiple time zones.
                 Outside of standard hours, messages can be submitted at any time
                 and will be addressed on the next business day.

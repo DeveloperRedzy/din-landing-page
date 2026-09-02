@@ -101,7 +101,7 @@ export function WhyDin() {
                       International Presence
                     </span>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Offices in London, Wyoming, and Luxembourg, supporting
+                      Offices in Wyoming (USA), London, and Luxembourg, supporting
                       clients across multiple time zones.
                     </p>
                   </div>

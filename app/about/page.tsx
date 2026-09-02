@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about DIN — our mission, values, and team across London, Wyoming, and Luxembourg. Integrated consulting for businesses worldwide.',
+    'Learn about DIN — our mission, values, and team across Wyoming (USA), London, and Luxembourg. Integrated consulting for businesses worldwide.',
 };
 
 const pillars = [
@@ -190,10 +190,12 @@ export default function AboutPage() {
                 <div className='flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent mb-4'>
                   <MapPin className='h-5 w-5' />
                 </div>
-                <h3 className='font-semibold text-foreground'>London Office</h3>
+                <h3 className='font-semibold text-foreground'>
+                  United States Office
+                </h3>
                 <p className='mt-2 text-sm text-muted-foreground'>
-                  Our UK headquarters, supporting clients across the United
-                  Kingdom and beyond.
+                  Sheridan, Wyoming, USA — serving clients across the United
+                  States and global markets.
                 </p>
               </div>
               <div className='rounded-xl border border-border bg-card p-6'>
@@ -201,11 +203,11 @@ export default function AboutPage() {
                   <MapPin className='h-5 w-5' />
                 </div>
                 <h3 className='font-semibold text-foreground'>
-                  Wyoming Office
+                  United Kingdom Office
                 </h3>
                 <p className='mt-2 text-sm text-muted-foreground'>
-                  Sheridan, Wyoming — serving clients across the United States
-                  and global markets.
+                  London, UK — our UK headquarters, supporting clients across
+                  the United Kingdom and beyond.
                 </p>
               </div>
               <div className='sm:col-span-2 rounded-xl border border-border bg-card p-6'>
@@ -216,8 +218,8 @@ export default function AboutPage() {
                   Luxembourg Office
                 </h3>
                 <p className='mt-2 text-sm text-muted-foreground'>
-                  Our European office, supporting clients across the EU and
-                  continental Europe.
+                  Luxembourg City — our European office, supporting clients
+                  across the EU and continental Europe.
                 </p>
               </div>
             </div>

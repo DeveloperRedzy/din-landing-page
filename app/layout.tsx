@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 const description =
-  'Expert bookkeeping, financial consulting, marketing strategy, fintech consulting, IT solutions, and engineering services. Offices in London, Wyoming, and Luxembourg.';
+  'Expert bookkeeping, financial consulting, marketing strategy, fintech consulting, IT solutions, and engineering services. Offices in Wyoming (USA), London, and Luxembourg.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dinsolution.com'),
